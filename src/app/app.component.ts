@@ -31,6 +31,7 @@ export class AppComponent {
 
   fecha: Date = new Date();
   idioma: string = 'es';
+  activar: boolean = true;
 
   videoUrl: string = 'https://www.youtube.com/embed/2Vv-BfVoq4g';
   cambiarIdioma(idioma: string) {

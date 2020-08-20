@@ -137,6 +137,17 @@
           <td>{{ fecha | date:'MMMM - dd':'':idioma}}</td>
           <td> Cambia el idioma de la fecha segun el boton seleccionado</td>
         </tr>
+        <tr>
+          <td>{{nombre}}</td>
+          <td>
+            password {{activar}}<br>
+            <button (click)="activar = !activar" type="button" class="mr-1 btn btn-outline-primary">
+              {{activar ? 'Mostrar contraseña': 'Ocultar nombre'}}
+            </button>
+          </td>
+          <td>{{nombre | password:activar}}</td>
+          <td>Pipe para convertir string a formato contraseña</td>
+        </tr>
       </tbody>
     </table>
 
