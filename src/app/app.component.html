@@ -114,6 +114,23 @@
           <td>{{ fecha | date:'MMMM - dd'}}</td>
           <td> Formato de fecha en formato personalizado</td>
         </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date:'MMMM-dd'</td>
+          <td>{{ fecha | date:'MMMM - dd':'':'en'}}</td>
+          <td> Formato de fecha en formato personalizado en inglés</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>
+            date:'MMMM-dd':'':{{idioma}} <br>
+            <button (click)="cambiarIdioma('es')" type="button" class="mr-1 btn btn-outline-primary">Español</button>
+            <button (click)="cambiarIdioma('en')" type="button" class="mr-1 btn btn-outline-secondary">Inglés</button>
+            <button (click)="cambiarIdioma('fr')" type="button" class="mr-1 btn btn-outline-success">Francés</button>
+          </td>
+          <td>{{ fecha | date:'MMMM - dd':'':idioma}}</td>
+          <td> Cambia el idioma de la fecha segun el boton seleccionado</td>
+        </tr>
       </tbody>
     </table>
 

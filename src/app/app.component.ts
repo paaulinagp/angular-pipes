@@ -29,4 +29,9 @@ export class AppComponent {
   });
 
   fecha: Date = new Date();
+  idioma: string = 'es';
+
+  cambiarIdioma(idioma: string) {
+    this.idioma = idioma;
+  }
 }
