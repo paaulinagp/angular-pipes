@@ -22,9 +22,11 @@ export class AppComponent {
     },
   };
 
-  promesa = new Promise<string>((resolve) => {
+  promesa: Promise<string> = new Promise<string>((resolve) => {
     setTimeout(() => {
       resolve('Llegó la data');
     }, 4500);
   });
+
+  fecha: Date = new Date();
 }
