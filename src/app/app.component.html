@@ -42,13 +42,60 @@
           <td>{{arreglo | slice:1:5}}</td>
           <td>Muestra los valores de un arreglo empezando de la posición 1 hasta la posición 5</td>
         </tr>
+        <tr>
+          <td>{{PI}}</td>
+          <td>number: '1.0-0'</td>
+          <td>{{ PI | number: '1.0-0'}}</td>
+          <td>Mostrar una variable en formato número y se especifican la cantidad de enteros y decimales</td>
+        </tr>
+        <tr>
+          <td>{{PI}}</td>
+          <td>number: '1.0-2'</td>
+          <td>{{ PI | number: '1.0-4'}}</td>
+          <td>Mostrar valor de PI con 4 decimales</td>
+        </tr>
+        <tr>
+          <td>{{porcentaje}}</td>
+          <td>percent</td>
+          <td>{{ porcentaje | percent}}</td>
+          <td>Convierte la cantidad a porcentaje</td>
+        </tr>
+        <tr>
+          <td>{{porcentaje}}</td>
+          <td>percent</td>
+          <td>{{ porcentaje | percent:'2.2-2'}}</td>
+          <td>Convierte la cantidad a porcentaje con 2 decimales</td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td>currency</td>
+          <td>{{ salario | currency}}</td>
+          <td>Convierte la cantidad a formato de moneda</td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td>currency: 'EUR'</td>
+          <td>{{ salario | currency: 'EUR'}}</td>
+          <td>Formato moneda a euros</td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td>currency: 'CAD':'symbol-narrow'</td>
+          <td>{{ salario | currency: 'CAD':'symbol-narrow'}}</td>
+          <td>Formato moneda canadiense</td>
+        </tr>
       </tbody>
     </table>
 
 
-    <h4>Slice</h4>
+    <h3>Slice</h3>
     <ul>
       <li *ngFor="let item of arreglo | slice:5:20">{{ item }}</li>
     </ul>
+
+    <h3>JSON</h3>
+    <pre>
+      {{heroe | json }}
+    </pre>
   </div>
 </div>
